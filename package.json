@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "webpack-dev-server --open --inline --hot --config webpack.config.js --port 2333",
-    "build": "lessc --clean-css ./entry.less ./dist/s.min.css"
+    "build": "lessc --plugin=less-plugin-clean-css=\"advanced\" ./entry.less ./dist/s.min.css"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "css-loader": "^0.28.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
+    "less-plugin-clean-css": "^1.5.1",
     "style-loader": "^0.16.1",
     "uglify-js": "^2.8.22",
     "uglifyjs-webpack-plugin": "^0.4.1",
