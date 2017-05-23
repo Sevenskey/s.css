@@ -20,6 +20,39 @@
     background: @orange;
 }
 
+.s-tran {
+    transition: all .3s;
+}
+
 .s-btn {
+    .s-blue;
     cursor: pointer;
+    padding: .6em 1em;
+    margin: .3em;
+    /*border: 2px solid @blue;*/
+    border: 0;
+    color: white;
+    border-radius: ~"20% / 48%";
+
+    &:hover {
+        background: @blue1;
+        /*border-color: @blue1;*/
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.s-btn-red {
+    .s-red;
+    &:hover {
+        background: @red1;
+    }
+}
+
+.s-btn-green {
+    .s-green;
+    &:hover {
+        background: @green1;
+    }
 }
