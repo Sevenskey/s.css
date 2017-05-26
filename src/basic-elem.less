@@ -1,58 +1,234 @@
-.s-red { 
-    background: @red;
-}
-.s-green { 
-    background: @green;
-}
-.s-yellow { 
-    background: @yellow;
-}
-.s-blue { 
-    background: @blue;
-}
-.s-purple { 
-    background: @purple;
-}
-.s-aqua { 
-    background: @aqua;
-}
-.s-orange { 
-    background: @orange;
-}
+/*
+* Button
+* Code
+* Image
+* Table
+* Form
+* List
+* Link
+* Background
+* Effection
+*/
 
-.s-tran {
-    transition: all .3s;
-}
+/***** Button *****/
 
+.s-btn-genfun ( @bg0, @bg1 ) {
+    background: @bg0;
+    &:hover {
+        background: @bg1;
+    }
+}
 .s-btn {
     .s-blue;
     cursor: pointer;
     padding: .6em 1em;
-    margin: .3em;
-    /*border: 2px solid @blue;*/
+    margin: @item-lr-inline-margin;
     border: 0;
     color: white;
-    border-radius: ~"20% / 48%";
+    border-radius: ~"20% / 45%";
 
     &:hover {
         background: @blue1;
-        /*border-color: @blue1;*/
     }
     &:focus {
         outline: none;
     }
 }
-
 .s-btn-red {
-    .s-red;
-    &:hover {
-        background: @red1;
+    .s-btn-genfun( @red0, @red1 );
+}
+.s-btn-green {
+    .s-btn-genfun( @green0, @green1 );
+}
+.s-btn-yellow {
+    .s-btn-genfun( @yellow0, @yellow1 );
+}
+.s-btn-purple {
+    .s-btn-genfun( @purple0, @purple1 );
+}
+.s-btn-aqua {
+    .s-btn-genfun( @aqua0, @aqua1 );
+}
+.s-btn-orange {
+    .s-btn-genfun( @orange0, @orange1 );
+}
+.s-btn-grey {
+    .s-btn-genfun( @grey0, @grey1 );
+}
+
+/***** Code *****/
+
+.s-code-block {
+    display: block;
+    padding: .6em 1em;
+    margin: @item-ud-block-margin 0;
+}
+.s-code-inline {
+    padding: .15em .4em;
+    margin: 0 @item-lr-inline-margin;
+}
+
+/***** Image *****/
+
+.s-img-block {
+    max-width: 100%;
+    display: block;
+    margin: 1em 0;
+}
+.s-img-inline {
+    margin: 0 @item-lr-inline-margin;
+}
+.s-img-item {
+    margin: @item-ud-block-margin 0;
+    padding: @item-ud-block-margin 0;
+    text-align: center;
+    img {
+        .s-img-block;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: inline-block;
+    }
+    p {
+        color: @minor-text;
+        font-size: .9em;
     }
 }
 
-.s-btn-green {
-    .s-green;
-    &:hover {
-        background: @green1;
+/***** Table *****/
+
+.s-table {
+    background: @blue;
+
+    border: 1px solid #ccc;
+    padding: .3em;
+    margin: @item-ud-block-margin 0;
+    border-collapse: separate;
+    border-spacing: 4px;
+    th, td {
+        padding: .6em;
+    }
+    th {
+        background-color: @bg1;
+    }
+    td {
+    }
+    tr {
+        background-color: @bg;
+        &:hover {
+            opacity: .9;
+        }
     }
 }
+
+/***** Form *****/
+
+.s-input-text {
+    padding: @item-lr-inline-margin;
+    border: 3px solid @blue;
+    margin: @item-lr-inline-margin @item-lr-inline-margin;
+
+    &:focus {
+        border-color: @blue1;
+        outline: none;
+        background-color: @bg;
+    }
+}
+.s-input-genfun ( @borderColor0, @borderColor1 ) {
+    border-color: @borderColor0;
+    &:focus {
+        border-color: @borderColor1;
+    }
+}
+.s-input-text-red {
+    .s-input-genfun( @red0, @red1 );
+}
+.s-input-text-green {
+    .s-input-genfun( @green0, @green1 );
+}
+.s-input-text-yellow {
+    .s-input-genfun( @yellow0, @yellow1 );
+}
+.s-input-text-orange {
+    .s-input-genfun( @orange0, @orange1 );
+}
+.s-input-text-aqua {
+    .s-input-genfun( @aqua0, @aqua1 );
+}
+.s-input-text-purple {
+    .s-input-genfun( @purple0, @purple1 );
+}
+.s-input-text-grey {
+    .s-input-genfun( @grey0, @grey1 );
+}
+
+/**** Link *****/
+
+.s-link-genfun ( @color ) {
+    color: @color;
+    &:hover {
+        background-color: @color;
+    }
+}
+.s-link-red {
+    .s-link-genfun( @red1 );
+}
+.s-link-green {
+    .s-link-genfun( @green1 );
+}
+.s-link-yellow {
+    .s-link-genfun( @yellow1 );
+}
+.s-link-orange {
+    .s-link-genfun( @orange1 );
+}
+.s-link-purple {
+    .s-link-genfun( @purple1 );
+}
+.s-link-grey {
+    .s-link-genfun( @grey1 );
+}
+.s-link-aqua {
+    .s-link-genfun( @aqua1 );
+}
+
+/***** List *****/
+
+/***** Background *****/
+
+.s-bg-genfun ( @bg ) {
+    background-color: @bg;
+}
+.s-red { 
+    .s-bg-genfun( @red );
+}
+.s-green { 
+    .s-bg-genfun( @green );
+}
+.s-yellow { 
+    .s-bg-genfun( @yellow );
+}
+.s-blue { 
+    .s-bg-genfun( @blue );
+}
+.s-purple { 
+    .s-bg-genfun( @purple );
+}
+.s-aqua { 
+    .s-bg-genfun( @aqua );
+}
+.s-orange { 
+    .s-bg-genfun( @orange );
+}
+.s-grey {
+    .s-bg-genfun( @grey );
+}
+.s-default {
+    .s-bg-genfun( @bg );
+}
+
+/***** Effection *****/
+
+.s-tran {
+    transition: all .3s;
+}
+

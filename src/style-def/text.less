@@ -1,13 +1,52 @@
-p, div, button, input, section, li, nav, header, footer, article,
-h1, h2, h3, h4, h5, h6 {
+@item-ud-block-margin: 1em;
+@item-lr-inline-margin: .3em;
+
+p, div, button, input, section, li, nav, header, footer, article, code,
+h1, h2, h3, h4, h5, h6,
+td, th {
     color: @main-text;
 }
 
 a {
     color: @blue1;
+    &:hover {
+        background-color: @blue1;
+        color: white;
+        text-decoration: none;
+    }
 }
 
-p {
+p, li {
     line-height: 130%;
 }
 
+li {
+    padding: .15em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2.5em;
+}
+h3 {
+    font-size: 2.1em;
+}
+h4 {
+    font-size: 1.7em;
+}
+h5 {
+    font-size: 1.4em;
+}
+h6 {
+    font-size: 1.1em;
+}
+
+code {
+    background: @bg;
+}
