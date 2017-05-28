@@ -1,16 +1,20 @@
 @item-ud-block-margin: 1em;
 @item-lr-inline-margin: .3em;
 
-p, div, button, input, section, li, nav, header, footer, article, code,
+@text-default: 1em;
+@text-sm: .8em;
+@text-lg: 1.2em;
+@text-xl: 1.4em;
+
+p, div, a, button, input, section, li, nav, header, footer, article, code,
 h1, h2, h3, h4, h5, h6,
 td, th {
-    color: @main-text;
+    color: @main-text-color;
 }
 
 a {
-    color: @blue1;
     &:hover {
-        background-color: @blue1;
+        background-color: @main-text-color;
         color: white;
         text-decoration: none;
     }

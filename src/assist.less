@@ -1,0 +1,58 @@
+/***** Background *****/
+
+.s-bg-genfun ( @bg ) {
+    background-color: @bg;
+}
+.s-red { 
+    .s-bg-genfun( @red );
+}
+.s-green { 
+    .s-bg-genfun( @green );
+}
+.s-yellow { 
+    .s-bg-genfun( @yellow );
+}
+.s-blue { 
+    .s-bg-genfun( @blue );
+}
+.s-purple { 
+    .s-bg-genfun( @purple );
+}
+.s-aqua { 
+    .s-bg-genfun( @aqua );
+}
+.s-orange { 
+    .s-bg-genfun( @orange );
+}
+.s-grey {
+    .s-bg-genfun( @grey );
+}
+.s-bg {
+    .s-bg-genfun( @bg );
+}
+
+/***** Effection *****/
+.s-tran {
+    transition: all .3s;
+}
+.s-radius {
+    border-radius: 3px;
+}
+.s-round {
+    border-radius: ~"20% / 45%";
+}
+.s-righta { // right angle
+    border-radius: 0;
+}
+.s-text-default {
+    font-size: @text-default;
+}
+.s-text-sm {
+    font-size: @text-sm;
+}
+.s-text-lg {
+    font-size: @text-lg;
+}
+.s-text-xl {
+    font-size: @text-xl;
+}

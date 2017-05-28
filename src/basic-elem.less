@@ -7,7 +7,6 @@
 * List
 * Link
 * Background
-* Effection
 */
 
 /***** Button *****/
@@ -89,7 +88,7 @@
         display: inline-block;
     }
     p {
-        color: @minor-text;
+        color: @minor-text-color;
         font-size: .9em;
     }
 }
@@ -100,7 +99,7 @@
     background: @blue;
 
     border: 1px solid #ccc;
-    padding: .3em;
+    padding: .23em;
     margin: @item-ud-block-margin 0;
     border-collapse: separate;
     border-spacing: 4px;
@@ -169,6 +168,9 @@
         background-color: @color;
     }
 }
+.s-link-blue {
+    .s-link-genfun( @blue1 );
+}
 .s-link-red {
     .s-link-genfun( @red1 );
 }
@@ -192,43 +194,4 @@
 }
 
 /***** List *****/
-
-/***** Background *****/
-
-.s-bg-genfun ( @bg ) {
-    background-color: @bg;
-}
-.s-red { 
-    .s-bg-genfun( @red );
-}
-.s-green { 
-    .s-bg-genfun( @green );
-}
-.s-yellow { 
-    .s-bg-genfun( @yellow );
-}
-.s-blue { 
-    .s-bg-genfun( @blue );
-}
-.s-purple { 
-    .s-bg-genfun( @purple );
-}
-.s-aqua { 
-    .s-bg-genfun( @aqua );
-}
-.s-orange { 
-    .s-bg-genfun( @orange );
-}
-.s-grey {
-    .s-bg-genfun( @grey );
-}
-.s-default {
-    .s-bg-genfun( @bg );
-}
-
-/***** Effection *****/
-
-.s-tran {
-    transition: all .3s;
-}
 
